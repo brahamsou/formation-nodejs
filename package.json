@@ -4,11 +4,9 @@
   "description": "bonjour",
   "main": "index.js",
   "scripts": {
-    "init:typescript": "npx tsc --watch",
-    "watch:app": "npx nodemon dist/index.js",
-    "start": "npx concurrently npm:init:typescript npm:watch:app",
-    "start1": "node -r dotenv/config dist/index.js",
-    "start:dev": "ts-node -r dotenv/config src/index.ts"
+    "watch:typescript": "npx tsc --watch",
+    "watch:app": "npx nodemon -r dotenv/config dist/index.js",
+    "start": "npx concurrently npm:init:typescript npm:watch:app"
   },
   "repository": {
     "type": "git",
