@@ -1,5 +1,11 @@
 console.log("bonjour bonjour");
 console.log("coucou");
-console.log("coucou lhadja sammou");
+console.log("coucou sammou");
 console.log("test");
 console.log("teste2");
+console.log("test3");
+console.log("test4");
+console.log("process.env.NODE_ENV");
+console.log("process.env.TZ");
+console.log("process.env.HOST");
+console.log("process.env.PORT");

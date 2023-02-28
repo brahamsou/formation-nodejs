@@ -6,7 +6,9 @@
   "scripts": {
     "init:typescript": "npx tsc --watch",
     "watch:app": "npx nodemon dist/index.js",
-    "start": "npx concurrently npm:init:typescript npm:watch:app"
+    "start": "npx concurrently npm:init:typescript npm:watch:app",
+    "start1": "node -r dotenv/config dist/index.js",
+    "start:dev": "ts-node -r dotenv/config src/index.ts"
   },
   "repository": {
     "type": "git",
@@ -24,5 +26,8 @@
     "concurrently": "^7.6.0",
     "nodemon": "^2.0.20",
     "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3"
   }
 }
