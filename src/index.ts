@@ -25,3 +25,12 @@ app.get("/", () => {
 app.get("/hello", () => {
   return "Bonjour tout le monde";
 });
+
+app.get("/eleves", () => {
+  return [
+    { id: 1, name: "john", firstname: "john", age: 32 },
+    { id: 2, name: "rose", firstname: "john", age: 36 },
+    { id: 3, name: "jane", firstname: "john", age: 40 },
+    { id: 4, name: "jean", firstname: "john", age: 38 },
+  ];
+});
