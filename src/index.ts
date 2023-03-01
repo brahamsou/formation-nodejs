@@ -26,7 +26,9 @@ app.get("/hello", () => {
   return "Bonjour tout le monde";
 });
 
-app.get("/eleves", () => {
+app.get("/eleves", (request, response) => {
+  // ajouter un entete http
+  response.header("Developed-with", "fastify");
   return [
     { id: 1, name: "john", firstname: "john", age: 32 },
     { id: 2, name: "rose", firstname: "john", age: 36 },
