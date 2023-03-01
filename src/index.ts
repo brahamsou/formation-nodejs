@@ -11,6 +11,8 @@ console.log(process.env.HOST);
 console.log(process.env.PORT);
 
 import fastify from "fastify";
+import fastifyPlugin from "fastify-plugin";
+import calculatriceRoutes from "./routes/calculatrice";
 const app = fastify();
 app.listen({ port: process.env.PORT as any, host: process.env.HOST }, () => {
   console.log(
@@ -36,3 +38,5 @@ app.get("/eleves", (request, response) => {
     { id: 4, name: "jean", firstname: "john", age: 38 },
   ];
 });
+
+app.register(fastifyPlugin(calculatriceRoutes));
